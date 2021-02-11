@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/device/device",
+    "pages/gifParse/gifParse"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "点阵灯笼",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f8f8"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,13 @@
+/* pages/main.wxss */
+
+.button {
+  position: fixed;
+  width: 690rpx;
+  bottom: 130rpx;
+}
+
+.btsubmit {
+  position: fixed;
+  width: 690rpx;
+  bottom: 30rpx;
+}

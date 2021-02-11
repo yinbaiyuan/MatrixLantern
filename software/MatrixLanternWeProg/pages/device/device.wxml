@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- <text style="font-size:medium;word-break:break-all">设备名称：{{name}}</text>
+  <text style="font-size:x-small;color:gray;word-break:break-all">设备ID：{{connectedDeviceId}}</text>
+  <text style="font-size:x-small;color:gray">状态：{{connected?"已连接":"已断开"}}</text>
+
+  <text style="font-size:medium;margin-top:10px">接收内容：</text>
+  <textarea class="res" maxlength="-1" disabled value="{{receiveText}}" />
+  <text> \n </text>
+
+   -->
+
+  <scroll-view scroll-y style="width:690rpx;height:{{list_height}}rpx">
+    <block wx:for="{{funcList}}" wx:key="funcId">
+      <view class="list-item" id="{{item.funcId}}">
+        <image style="width:36px;height:36px" mode="aspectFit" src="/images/{{item.icon}}"></image>
+        <block wx:if="{{item.type == 1}}">
+          
+          <view style="display:flex;flex-direction:column;width:70%">
+            <text style="font-size:medium;word-break:break-all">{{item.name}}</text>
+            <text style="font-size:x-small;color:gray;word-break:break-all">{{item.desc}}</text>
+          </view>
+          <switch id="{{item.funcId}}" checked="{{item.enable}}" bindchange="switchChange"></switch>
+        </block>
+        <block wx:if="{{item.type == 2}}">
+          <view style="display:flex;flex-direction:column;width:70%">
+            <text style="font-size:medium;word-break:break-all">{{item.name}}</text>
+            <text style="font-size:x-small;color:gray;word-break:break-all">{{item.desc}}</text>
+          </view>
+          <switch id="{{item.funcId}}" checked="{{item.enable}}" bindchange="gifParse"></switch>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+
+  <button type="primary" class="button" bindtap="Send">提交</button>
+</view>

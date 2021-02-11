@@ -1,0 +1,12 @@
+<view class="container">
+  
+  <image src="{{imgPath}}" mode="aspecFill" style="width: 600rpx; height: 600rpx ;background-color: #b8b8b8;"/>
+  <view class="body-view" style="flex-direction:column ; width:80%" >
+    <text style="text-align: center;">横向点数量</text>
+    <slider id='sliderW' bindchange="sliderchange" min="8" max="16" value = "12" show-value/>
+    <text style="text-align: center;">纵向点数量</text>
+    <slider id='sliderH' bindchange="sliderchange" min="8" max="16" value = "12" show-value/>
+  </view>
+  <button type="primary" class="button" bindtap="Search">{{btName}}</button>
+  <button type="primary" class="btsubmit" bindtap="submit" disabled='{{btsubmit_disable}}'>{{submit}}</button>
+</view>
